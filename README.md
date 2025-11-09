@@ -2,7 +2,7 @@
 
 ## Project Description
 
-A real-time multi-hazard risk assessment platform that generates Low/Medium/High risk scores for flood, hurricane, and wildfire exposure across U.S. counties. The system uses live climate data from Open-Meteo ERA5, historical FEMA NFIP claims, and a linear regression ML model to predict insurance payouts based on climate markers.
+A real-time multi-hazard risk assessment platform that generates Low/Medium/High risk scores for flood, hurricane, and wildfire exposure across U.S. counties and predicts insurance payouts. The system uses live climate data from Open-Meteo ERA5, historical FEMA NFIP claims, and a linear regression ML model to predict insurance payouts based on climate markers.
 
 **Key Features:**
 - Multi-hazard risk scoring (flood, hurricane, wildfire)
