@@ -15,6 +15,7 @@ interface RiskMapProps {
   startDate?: Date;
   endDate?: Date;
   onRiskDataUpdate?: (data: Record<string, number>) => void;
+  onDisasterTypeChange?: (type: "flood" | "hurricane") => void;
 }
 
 interface RegionData {
@@ -34,13 +35,21 @@ interface CityData {
   expectedClaim: number;
 }
 
-const RiskMap = ({ coordinates, isAnalyzing, disasterType, startDate, endDate, onRiskDataUpdate }: RiskMapProps) => {
+const RiskMap = ({ coordinates, isAnalyzing, disasterType, startDate, endDate, onRiskDataUpdate, onDisasterTypeChange }: RiskMapProps) => {
   const [hoveredRegion, setHoveredRegion] = useState<RegionData | null>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
   const [showUserTooltip, setShowUserTooltip] = useState(false);
   const [regions, setRegions] = useState<RegionData[]>([]);
-  const [mapDisasterType, setMapDisasterType] = useState<"flood" | "hurricane">("flood");
+  const [mapDisasterType, setMapDisasterType] = useState<"flood" | "hurricane">(disasterType || "flood");
+
+  // Sync mapDisasterType with disasterType prop
+  useEffect(() => {
+    if (disasterType && disasterType !== mapDisasterType) {
+      setMapDisasterType(disasterType);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [disasterType]);
 
   const apiKey = "AIzaSyARKE4j2byp70oP0qM8DS05kNFLRZeTizU";
 
@@ -172,7 +181,13 @@ const RiskMap = ({ coordinates, isAnalyzing, disasterType, startDate, endDate, o
           <ToggleGroup 
             type="single" 
             value={mapDisasterType}
-            onValueChange={(value) => value && setMapDisasterType(value as "flood" | "hurricane")}
+            onValueChange={(value) => {
+              if (value) {
+                const newType = value as "flood" | "hurricane";
+                setMapDisasterType(newType);
+                onDisasterTypeChange?.(newType);
+              }
+            }}
           >
             <ToggleGroupItem value="flood" aria-label="Flood">
               Flood

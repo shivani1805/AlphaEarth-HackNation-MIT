@@ -58,11 +58,17 @@ const Index = () => {
               startDate={startDate}
               endDate={endDate}
               onRiskDataUpdate={setRiskData}
+              onDisasterTypeChange={(type) => setDisasterType(type)}
             />
           </div>
           
           <div className="space-y-4">
-            <RiskLegend />
+            <RiskLegend 
+              disasterType={disasterType}
+              startDate={startDate}
+              endDate={endDate}
+              isAnalyzing={isAnalyzing}
+            />
             {isAnalyzing && riskData && (
               <div className="flex justify-end">
                 <DownloadCsvButton riskData={riskData} disasterType={disasterType} />
