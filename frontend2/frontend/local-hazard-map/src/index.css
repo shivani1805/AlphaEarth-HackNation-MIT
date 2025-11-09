@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 216 28% 7%;
+    --foreground: 213 31% 96%;
+
+    --card: 217 33% 10%;
+    --card-foreground: 213 31% 96%;
+
+    --popover: 217 33% 10%;
+    --popover-foreground: 213 31% 96%;
+
+    --primary: 210 100% 56%;
+    --primary-foreground: 216 28% 7%;
+
+    --secondary: 217 33% 15%;
+    --secondary-foreground: 213 31% 96%;
+
+    --muted: 217 33% 15%;
+    --muted-foreground: 213 20% 65%;
+
+    --accent: 28 100% 60%;
+    --accent-foreground: 216 28% 7%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 213 31% 96%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 210 100% 56%;
+
+    --radius: 0.75rem;
+
+    /* Risk gradient colors */
+    --risk-low: 142 76% 36%;
+    --risk-medium: 48 100% 50%;
+    --risk-high: 0 84% 60%;
+
+    /* Chart colors */
+    --chart-1: 210 100% 56%;
+    --chart-2: 190 100% 48%;
+    --chart-3: 48 100% 50%;
+    --chart-4: 28 100% 60%;
+    --chart-5: 0 84% 60%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 56%), hsl(190 100% 48%));
+    --gradient-risk: linear-gradient(90deg, hsl(210 100% 56%), hsl(48 100% 50%), hsl(0 84% 60%));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(210 100% 56% / 0.2);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.4);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
