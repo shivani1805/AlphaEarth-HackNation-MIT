@@ -1,0 +1,22 @@
+# Python venv
+venv/
+.venv/
+env/
+
+# Node deps
+node_modules/
+.node_modules/
+
+# Bytecode + cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+.env.*
+
+# Build outputs
+dist/
+build/
+results/

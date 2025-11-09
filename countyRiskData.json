@@ -1,0 +1,106 @@
+{
+  "counties": [
+    {
+      "county_name": "Franklin",
+      "centroid_coordinates": {
+        "latitude": 42.57384256,
+        "longitude": -72.65336228000001
+      }
+    },
+    {
+      "county_name": "Dukes",
+      "centroid_coordinates": {
+        "latitude": 41.41913284210526,
+        "longitude": -70.69510755789474
+      }
+    },
+    {
+      "county_name": "Hampden",
+      "centroid_coordinates": {
+        "latitude": 42.12556794736841,
+        "longitude": -72.63664063157894
+      }
+    },
+    {
+      "county_name": "Hampshire",
+      "centroid_coordinates": {
+        "latitude": 42.30630634210527,
+        "longitude": -72.46186865789474
+      }
+    },
+    {
+      "county_name": "Middlesex",
+      "centroid_coordinates": {
+        "latitude": 42.406709263157886,
+        "longitude": -71.37434867368422
+      }
+    },
+    {
+      "county_name": "Norfolk",
+      "centroid_coordinates": {
+        "latitude": 42.18037670312499,
+        "longitude": -71.20887995312498
+      }
+    },
+    {
+      "county_name": "Plymouth",
+      "centroid_coordinates": {
+        "latitude": 41.942423105263146,
+        "longitude": -70.74367486842105
+      }
+    },
+    {
+      "county_name": "Barnstable",
+      "centroid_coordinates": {
+        "latitude": 41.719835107055935,
+        "longitude": -70.24123610218973
+      }
+    },
+    {
+      "county_name": "Berkshire",
+      "centroid_coordinates": {
+        "latitude": 42.31918504347826,
+        "longitude": -73.18169969565218
+      }
+    },
+    {
+      "county_name": "Worcester",
+      "centroid_coordinates": {
+        "latitude": 42.29681218292683,
+        "longitude": -71.81963164634145
+      }
+    },
+    {
+      "county_name": "Suffolk",
+      "centroid_coordinates": {
+        "latitude": 42.350626000000005,
+        "longitude": -71.04477016666667
+      }
+    },
+    {
+      "county_name": "Bristol",
+      "centroid_coordinates": {
+        "latitude": 41.68904489230769,
+        "longitude": -71.03310086923074
+      }
+    },
+    {
+      "county_name": "Essex",
+      "centroid_coordinates": {
+        "latitude": 42.60989228333332,
+        "longitude": -70.87029430833334
+      }
+    },
+    {
+      "county_name": "Nantucket",
+      "centroid_coordinates": {
+        "latitude": 41.302986250000004,
+        "longitude": -70.10408105
+      }
+    }
+  ],
+  "disaster_type": "flood",
+  "start_date": "2023-07-01T04:00:00.000Z",
+  "end_date": "2023-07-01T04:00:00.000Z",
+  "timestamp": "2025-11-09T05:00:43.910Z"
+}
